@@ -12,10 +12,52 @@
   },
   "attributes": {
     "title": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "intro": {
+      "type": "richtext"
+    },
+    "published": {
+      "type": "boolean"
+    },
+    "type": {
       "type": "string"
     },
-    "content": {
-      "type": "richtext"
+    "likes": {
+      "type": "integer"
+    },
+    "outer": {
+      "type": "boolean"
+    },
+    "outer_image": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "outer_url": {
+      "type": "string"
+    },
+    "thumb": {
+      "type": "string"
+    },
+    "show_share_popup": {
+      "type": "boolean"
+    },
+    "article_category": {
+      "model": "article-category",
+      "via": "articles"
+    },
+    "article_author": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "articles"
     }
   }
 }

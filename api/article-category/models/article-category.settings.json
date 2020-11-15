@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "article_category",
+  "info": {
+    "name": "Article Category",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "maxLength": 50,
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "color": {
+      "type": "string",
+      "maxLength": 18
+    },
+    "thumb": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "articles": {
+      "via": "article_category",
+      "collection": "article"
+    }
+  }
+}

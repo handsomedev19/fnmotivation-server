@@ -67,6 +67,10 @@
     },
     "gender": {
       "type": "string"
+    },
+    "articles": {
+      "via": "article_author",
+      "collection": "article"
     }
   }
 }
