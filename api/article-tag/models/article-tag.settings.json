@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "article_category",
+  "collectionName": "article_tag",
   "info": {
-    "name": "Article Category",
+    "name": "Article Tag",
     "description": ""
   },
   "options": {
@@ -13,24 +13,16 @@
   "attributes": {
     "title": {
       "type": "string",
-      "maxLength": 50,
       "required": true,
       "unique": true
     },
     "slug": {
-      "type": "string",
-      "maxLength": 50
-    },
-    "color": {
-      "type": "string",
-      "maxLength": 18
+      "type": "uid",
+      "targetField": "title"
     },
     "articles": {
-      "via": "article_category",
+      "via": "article_tags",
       "collection": "article"
-    },
-    "thumb": {
-      "type": "string"
     }
   }
 }

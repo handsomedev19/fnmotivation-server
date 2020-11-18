@@ -44,20 +44,33 @@
     "outer_url": {
       "type": "string"
     },
-    "thumb": {
-      "type": "string"
-    },
     "show_share_popup": {
       "type": "boolean"
-    },
-    "article_category": {
-      "model": "article-category",
-      "via": "articles"
     },
     "article_author": {
       "plugin": "users-permissions",
       "model": "user",
       "via": "articles"
+    },
+    "article_category": {
+      "model": "article-category",
+      "via": "articles"
+    },
+    "thumb": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "article_tags": {
+      "collection": "article-tag",
+      "via": "articles",
+      "dominant": true
     }
   }
 }
