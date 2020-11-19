@@ -71,6 +71,10 @@
     "articles": {
       "via": "article_author",
       "collection": "article"
+    },
+    "comments": {
+      "via": "users_permissions_user",
+      "collection": "comment"
     }
   }
 }

@@ -71,6 +71,10 @@
       "collection": "article-tag",
       "via": "articles",
       "dominant": true
+    },
+    "comments": {
+      "via": "article",
+      "collection": "comment"
     }
   }
 }

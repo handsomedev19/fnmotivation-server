@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comment_reply",
+  "info": {
+    "name": "Comment Reply",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "comment": {
+      "model": "comment",
+      "via": "comment_replies"
+    }
+  }
+}
