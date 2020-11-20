@@ -18,6 +18,11 @@
     "comment": {
       "model": "comment",
       "via": "comment_replies"
+    },
+    "users_permissions_user": {
+      "via": "comment_replies",
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }

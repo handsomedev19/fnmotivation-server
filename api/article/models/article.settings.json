@@ -48,9 +48,9 @@
       "type": "boolean"
     },
     "article_author": {
+      "via": "articles",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "articles"
+      "model": "user"
     },
     "article_category": {
       "model": "article-category",

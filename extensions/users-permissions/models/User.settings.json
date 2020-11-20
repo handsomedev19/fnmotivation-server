@@ -69,12 +69,30 @@
       "type": "string"
     },
     "articles": {
-      "via": "article_author",
-      "collection": "article"
+      "collection": "article",
+      "via": "article_author"
     },
     "comments": {
-      "via": "users_permissions_user",
-      "collection": "comment"
+      "collection": "comment",
+      "via": "users_permissions_user"
+    },
+    "comment_replies": {
+      "collection": "comment-reply",
+      "via": "users_permissions_user"
+    },
+    "last_login": {
+      "type": "datetime"
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }
