@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "link_preview",
+  "info": {
+    "name": "Link Preview"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "url": {
+      "type": "string"
+    }
+  }
+}

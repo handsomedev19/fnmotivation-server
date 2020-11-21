@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "subscriber_category",
+  "collectionName": "subscribe_category",
   "info": {
-    "name": "Subscriber Category",
-    "description": ""
+    "name": "SubscribeCategory"
   },
   "options": {
     "increments": true,
@@ -11,12 +10,14 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "category_id": {
-      "type": "biginteger",
-      "required": true
-    },
     "user_id": {
       "type": "biginteger",
+      "default": "0",
+      "required": true
+    },
+    "category_id": {
+      "type": "biginteger",
+      "default": "0",
       "required": true
     }
   }
