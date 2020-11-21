@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "article_like",
+  "info": {
+    "name": "Article Like",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "article_id": {
+      "required": true,
+      "type": "biginteger"
+    },
+    "user_id": {
+      "type": "biginteger",
+      "required": true
+    }
+  }
+}

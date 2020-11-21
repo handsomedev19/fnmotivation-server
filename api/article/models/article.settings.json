@@ -13,7 +13,7 @@
   "attributes": {
     "title": {
       "type": "string",
-      "unique": true,
+      "unique": false,
       "required": true
     },
     "body": {
@@ -32,7 +32,8 @@
       "type": "string"
     },
     "likes": {
-      "type": "integer"
+      "type": "integer",
+      "default": 0
     },
     "outer": {
       "type": "boolean"
@@ -73,8 +74,8 @@
       "dominant": true
     },
     "comments": {
-      "via": "article",
-      "collection": "comment"
+      "collection": "comment",
+      "via": "article"
     }
   }
 }

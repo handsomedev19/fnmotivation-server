@@ -21,8 +21,8 @@
       "model": "user"
     },
     "article": {
-      "model": "article",
-      "via": "comments"
+      "via": "comments",
+      "model": "article"
     },
     "comment_replies": {
       "via": "comment",
