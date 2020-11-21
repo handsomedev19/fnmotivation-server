@@ -1,5 +1,6 @@
 'use strict';
 const { parseMultipartData, sanitizeEntity } = require('strapi-utils');
+const { linkPreview } = require(`link-preview-node`);
 
 /**
  * Read the documentation (https://strapi.io/documentation/v3.x/concepts/controllers.html#core-controllers)
@@ -12,27 +13,28 @@ module.exports = {
         //ctx.send('Hello World!');
 
         let url = ctx.request.body.url;
-       /* let userId = ctx.request.body.user_id;
-        let categoryIds = ctx.request.body.category_ids;
-        //console.log(ctx.request.body);
-        //console.log(categoryIds);
-        //console.log(typeof(categoryIds));
+        console.log(url);
+        let response = {};
+        
+        
+        await linkPreview(url)
+        .then(resp => {
+            console.log(resp);
+            /* { image: 'https://static.npmjs.com/338e4905a2684ca96e08c7780fc68412.png',
+                title: 'npm | build amazing things',
+                description: '',
+                link: 'http://npmjs.com' } */
+            // Note that '' is used when value of any detail of the link is not available
+            
+            response = {data: resp} ;
+            ctx.send(resp);
+        }).catch(catchErr => {
+            console.log(catchErr);
 
-        let responsive = [];
-        let entity;
-        let n = categoryIds.length;
-
-        for (let i = 0; i < n; i++) {
-            let categoryId = categoryIds[i];
-            let data = {user_id: parseInt(userId), category_id: parseInt(categoryId)}
-            //console.log(parseInt(userId));
-            //console.log(parseInt(categoryId));
-
-            entity = await strapi.services["subscribe-category"].create(data);
-            responsive.push(sanitizeEntity(entity, { model: strapi.models["subscribe-category"] }));       
-        }
-        return responsive;
-        */
+            response = {error: catchErr};
+            ctx.send(catchErr);
+        });
+        
         
     }    
 };
