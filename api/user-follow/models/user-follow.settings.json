@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_follow",
+  "info": {
+    "name": "user follow"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "from_customer_id": {
+      "type": "integer",
+      "required": true
+    },
+    "to_customer_id": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

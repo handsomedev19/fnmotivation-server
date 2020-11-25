@@ -22,6 +22,8 @@ module.exports = {
         let entity;
         let n = categoryIds.length;
 
+        const result = await strapi.query('subscribe-category').delete({user_id: parseInt(userId)});
+
         for (let i = 0; i < n; i++) {
             let categoryId = categoryIds[i];
             let data = {user_id: parseInt(userId), category_id: parseInt(categoryId)}

@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contact_us",
+  "info": {
+    "name": "Contact Us"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "subject": {
+      "type": "string"
+    },
+    "message": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

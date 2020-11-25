@@ -3,7 +3,7 @@
     {
       "method": "GET",
       "path": "/article-tags",
-      "handler": "article-tag.find",
+      "handler": "article-tags.find",
       "config": {
         "policies": []
       }
@@ -11,7 +11,7 @@
     {
       "method": "GET",
       "path": "/article-tags/count",
-      "handler": "article-tag.count",
+      "handler": "article-tags.count",
       "config": {
         "policies": []
       }
@@ -19,7 +19,7 @@
     {
       "method": "GET",
       "path": "/article-tags/:id",
-      "handler": "article-tag.findOne",
+      "handler": "article-tags.findOne",
       "config": {
         "policies": []
       }
@@ -27,7 +27,7 @@
     {
       "method": "POST",
       "path": "/article-tags",
-      "handler": "article-tag.create",
+      "handler": "article-tags.create",
       "config": {
         "policies": []
       }
@@ -35,7 +35,7 @@
     {
       "method": "PUT",
       "path": "/article-tags/:id",
-      "handler": "article-tag.update",
+      "handler": "article-tags.update",
       "config": {
         "policies": []
       }
@@ -43,7 +43,15 @@
     {
       "method": "DELETE",
       "path": "/article-tags/:id",
-      "handler": "article-tag.delete",
+      "handler": "article-tags.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/article-tags-multiple",
+      "handler": "article-tags.createMultiple",
       "config": {
         "policies": []
       }

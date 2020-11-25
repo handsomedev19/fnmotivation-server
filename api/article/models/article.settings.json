@@ -49,9 +49,9 @@
       "type": "boolean"
     },
     "article_author": {
-      "via": "articles",
       "plugin": "users-permissions",
-      "model": "user"
+      "model": "user",
+      "via": "articles"
     },
     "article_category": {
       "model": "article-category",
@@ -68,14 +68,9 @@
       "plugin": "upload",
       "required": false
     },
-    "article_tags": {
-      "collection": "article-tag",
-      "via": "articles",
-      "dominant": true
-    },
-    "comments": {
-      "collection": "comment",
-      "via": "article"
+    "comment": {
+      "via": "article",
+      "model": "comment"
     }
   }
 }

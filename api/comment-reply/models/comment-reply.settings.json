@@ -16,8 +16,8 @@
       "required": true
     },
     "comment": {
-      "model": "comment",
-      "via": "comment_replies"
+      "via": "comment_replies",
+      "model": "comment"
     },
     "users_permissions_user": {
       "via": "comment_replies",

@@ -69,12 +69,12 @@
       "type": "string"
     },
     "articles": {
-      "collection": "article",
-      "via": "article_author"
+      "via": "article_author",
+      "collection": "article"
     },
     "comments": {
-      "collection": "comment",
-      "via": "users_permissions_user"
+      "via": "users_permissions_user",
+      "collection": "comment"
     },
     "comment_replies": {
       "collection": "comment-reply",

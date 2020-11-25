@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/article-bookmarks",
+      "handler": "article-bookmark.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/article-bookmarks/count",
+      "handler": "article-bookmark.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/article-bookmarks/:id",
+      "handler": "article-bookmark.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/article-bookmarks",
+      "handler": "article-bookmark.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/article-bookmarks/:id",
+      "handler": "article-bookmark.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/article-bookmarks/:id",
+      "handler": "article-bookmark.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/article-bookmarks-custom/:id",
+      "handler": "article-bookmark.findBookmarkDetails",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "article_bookmark",
+  "info": {
+    "name": "Article Bookmark"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "user_id": {
+      "type": "integer",
+      "required": true
+    },
+    "article_id": {
+      "required": true,
+      "type": "integer"
+    }
+  }
+}

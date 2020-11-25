@@ -1,0 +1,68 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/user-follows",
+      "handler": "user-follow.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-follows/count",
+      "handler": "user-follow.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-follows/:id",
+      "handler": "user-follow.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/user-follows",
+      "handler": "user-follow.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/user-follows/:id",
+      "handler": "user-follow.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/user-follows/:id",
+      "handler": "user-follow.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-follows-followers/:id",
+      "handler": "user-follow.findfollowers",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-follows-followings/:id",
+      "handler": "user-follow.findfollowings",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -16,17 +16,17 @@
       "required": true
     },
     "users_permissions_user": {
-      "via": "comments",
       "plugin": "users-permissions",
-      "model": "user"
-    },
-    "article": {
-      "via": "comments",
-      "model": "article"
+      "model": "user",
+      "via": "comments"
     },
     "comment_replies": {
-      "via": "comment",
-      "collection": "comment-reply"
+      "collection": "comment-reply",
+      "via": "comment"
+    },
+    "article": {
+      "model": "article",
+      "via": "comment"
     }
   }
 }
