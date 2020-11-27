@@ -69,8 +69,8 @@
       "required": false
     },
     "comment": {
-      "via": "article",
-      "model": "comment"
+      "model": "comment",
+      "via": "article"
     }
   }
 }

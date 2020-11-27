@@ -55,6 +55,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "POST",
+      "path": "/article-bookmarks-delete",
+      "handler": "article-bookmark.customDelete",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }

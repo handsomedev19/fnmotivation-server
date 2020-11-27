@@ -13,13 +13,13 @@ module.exports = {
         //ctx.send('Hello World!');
 
         let url = ctx.request.body.url;
-        console.log(url);
+        //console.log(url);
         let response = {};
         
         
         await linkPreview(url)
         .then(resp => {
-            console.log(resp);
+            //console.log(resp);
             /* { image: 'https://static.npmjs.com/338e4905a2684ca96e08c7780fc68412.png',
                 title: 'npm | build amazing things',
                 description: '',
@@ -29,7 +29,7 @@ module.exports = {
             response = {data: resp} ;
             ctx.send(resp);
         }).catch(catchErr => {
-            console.log(catchErr);
+            //console.log(catchErr);
 
             response = {error: catchErr};
             ctx.send(catchErr);

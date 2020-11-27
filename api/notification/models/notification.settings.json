@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notification",
+  "info": {
+    "name": "notification"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "object_id": {
+      "type": "integer"
+    },
+    "text": {
+      "type": "string"
+    },
+    "read": {
+      "type": "boolean",
+      "default": false
+    },
+    "content_type_id": {
+      "type": "integer"
+    },
+    "user_from_id": {
+      "type": "integer"
+    },
+    "user_to_id": {
+      "type": "integer"
+    },
+    "admin_level": {
+      "type": "boolean",
+      "default": false
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

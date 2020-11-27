@@ -26,5 +26,13 @@ module.exports = {
         const result1 = await strapi.query('article').find({id_in: articleIds});
 
         ctx.send(result1);
+    },
+    async customDelete(ctx){
+        const userId = ctx.request.body.user_id;
+        const articleId = ctx.request.body.article_id;
+
+        const result = await strapi.query('article-bookmark').delete({user_id: userId, article_id: articleId});
+
+        ctx.send(result);
     }
 };

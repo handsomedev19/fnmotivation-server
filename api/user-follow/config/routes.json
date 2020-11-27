@@ -63,6 +63,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "POST",
+      "path": "/user-follows-delete",
+      "handler": "user-follow.deletefollowing",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }
