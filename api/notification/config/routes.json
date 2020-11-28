@@ -63,6 +63,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "POST",
+      "path": "/article-search-custom",
+      "handler": "notification.article_search_custom",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }

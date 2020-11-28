@@ -53,5 +53,12 @@ module.exports = {
         const result = await strapi.query('user-follow').delete({from_customer_id: fromCustomerId, to_customer_id: toCustomerId});
 
         ctx.send(result);
+    },
+
+    async get_new_users(ctx){
+        const result = await strapi.query('user', 'users-permissions').find();
+        const result1 = result.sort((a, b) => b.created_at - a.created_at);
+        const result2 = result1.slice(0, 5);
+        ctx.send(result2);
     }
 };

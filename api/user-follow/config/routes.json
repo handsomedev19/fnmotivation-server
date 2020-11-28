@@ -71,6 +71,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "GET",
+      "path": "/get-new-users",
+      "handler": "user-follow.get_new_users",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }
